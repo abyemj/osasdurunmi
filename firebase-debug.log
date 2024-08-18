@@ -1,0 +1,111 @@
+[debug] [2024-08-17T21:11:42.782Z] ----------------------------------------------------------------------
+[debug] [2024-08-17T21:11:42.789Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-08-17T21:11:42.790Z] CLI Version:   13.15.2
+[debug] [2024-08-17T21:11:42.791Z] Platform:      win32
+[debug] [2024-08-17T21:11:42.791Z] Node Version:  v20.2.0
+[debug] [2024-08-17T21:11:42.791Z] Time:          Sat Aug 17 2024 22:11:42 GMT+0100 (West Africa Standard Time)
+[debug] [2024-08-17T21:11:42.791Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-17T21:11:42.961Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-17T21:11:42.963Z] > authorizing via signed-in user (durumiosas@gmail.com)
+[debug] [2024-08-17T21:11:42.963Z] [iam] checking project osasdurumi-d91ab for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-17T21:11:42.967Z] > refreshing access token with scopes: []
+[debug] [2024-08-17T21:11:42.973Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-17T21:11:42.974Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-17T21:11:45.635Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-08-17T21:11:45.635Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-17T21:11:45.810Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions [none]
+[debug] [2024-08-17T21:11:45.810Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions x-goog-quota-user=projects/osasdurumi-d91ab
+[debug] [2024-08-17T21:11:45.811Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-17T21:11:48.762Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"firebase.projects.get\",\"firebasehosting.sites.update\"]}"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions failed, reason: Socket connection timeout
+[debug] [2024-08-17T21:11:48.763Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions
+[debug] [2024-08-17T21:11:48.764Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab [none]
+[debug] [2024-08-17T21:11:51.829Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab, {"headers":{},"method":"GET","signal":{}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab failed, reason: Socket connection timeout
+[debug] [2024-08-17T21:11:51.829Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab (original: request to https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab failed, reason: Socket connection timeout)
+[debug] [2024-08-17T21:11:51.834Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab [none]
+[debug] [2024-08-17T21:12:00.249Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab 200
+[debug] [2024-08-17T21:12:00.250Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab {"projectId":"osasdurumi-d91ab","projectNumber":"870937483276","displayName":"osasdurumi","name":"projects/osasdurumi-d91ab","resources":{"hostingSite":"osasdurumi-d91ab"},"state":"ACTIVE","etag":"1_045d3daf-cdfa-4d32-87b1-9ae218e7b31d"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-08-17T21:12:52.996Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at getReactVersion (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:36:45)
+    at build (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:50:26)
+    at async prepareFrameworks (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:224:33)
+    at async deploy (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:57:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-08-17T21:38:07.102Z] ----------------------------------------------------------------------
+[debug] [2024-08-17T21:38:07.566Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-08-17T21:38:07.568Z] CLI Version:   13.15.2
+[debug] [2024-08-17T21:38:07.569Z] Platform:      win32
+[debug] [2024-08-17T21:38:07.569Z] Node Version:  v20.2.0
+[debug] [2024-08-17T21:38:07.594Z] Time:          Sat Aug 17 2024 22:38:07 GMT+0100 (West Africa Standard Time)
+[debug] [2024-08-17T21:38:07.595Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-17T21:38:08.282Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-17T21:38:08.284Z] > authorizing via signed-in user (durumiosas@gmail.com)
+[debug] [2024-08-17T21:38:08.284Z] [iam] checking project osasdurumi-d91ab for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-17T21:38:08.312Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions [none]
+[debug] [2024-08-17T21:38:08.312Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions x-goog-quota-user=projects/osasdurumi-d91ab
+[debug] [2024-08-17T21:38:08.313Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-17T21:38:14.617Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions 200
+[debug] [2024-08-17T21:38:14.620Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-17T21:38:14.625Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab [none]
+[debug] [2024-08-17T21:38:16.745Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab, {"headers":{},"method":"GET","signal":{}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab failed, reason: Socket connection timeout
+[debug] [2024-08-17T21:38:16.745Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab (original: request to https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab failed, reason: Socket connection timeout)
+[debug] [2024-08-17T21:38:16.750Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab [none]
+[debug] [2024-08-17T21:38:18.325Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab 200
+[debug] [2024-08-17T21:38:18.325Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab {"projectId":"osasdurumi-d91ab","projectNumber":"870937483276","displayName":"osasdurumi","name":"projects/osasdurumi-d91ab","resources":{"hostingSite":"osasdurumi-d91ab"},"state":"ACTIVE","etag":"1_045d3daf-cdfa-4d32-87b1-9ae218e7b31d"}
+[debug] [2024-08-17T21:38:39.265Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at prepareFrameworks (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:125:64)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deploy (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:57:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-08-18T03:27:34.024Z] ----------------------------------------------------------------------
+[debug] [2024-08-18T03:27:34.133Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-08-18T03:27:34.134Z] CLI Version:   13.15.2
+[debug] [2024-08-18T03:27:34.134Z] Platform:      win32
+[debug] [2024-08-18T03:27:34.135Z] Node Version:  v20.2.0
+[debug] [2024-08-18T03:27:34.141Z] Time:          Sun Aug 18 2024 04:27:34 GMT+0100 (West Africa Standard Time)
+[debug] [2024-08-18T03:27:34.142Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-18T03:27:34.470Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-18T03:27:34.471Z] > authorizing via signed-in user (durumiosas@gmail.com)
+[debug] [2024-08-18T03:27:34.471Z] [iam] checking project osasdurumi-d91ab for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-18T03:27:34.488Z] > refreshing access token with scopes: []
+[debug] [2024-08-18T03:27:34.497Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-18T03:27:34.498Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-18T03:27:35.464Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-08-18T03:27:35.465Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-18T03:27:35.581Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions [none]
+[debug] [2024-08-18T03:27:35.581Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions x-goog-quota-user=projects/osasdurumi-d91ab
+[debug] [2024-08-18T03:27:35.582Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-18T03:27:36.915Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions 200
+[debug] [2024-08-18T03:27:36.915Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/osasdurumi-d91ab:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-18T03:27:36.917Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab [none]
+[debug] [2024-08-18T03:27:37.481Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab 200
+[debug] [2024-08-18T03:27:37.481Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/osasdurumi-d91ab {"projectId":"osasdurumi-d91ab","projectNumber":"870937483276","displayName":"osasdurumi","name":"projects/osasdurumi-d91ab","resources":{"hostingSite":"osasdurumi-d91ab"},"state":"ACTIVE","etag":"1_045d3daf-cdfa-4d32-87b1-9ae218e7b31d"}
+[debug] [2024-08-18T03:27:51.283Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at prepareFrameworks (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:124:67)
+    at deploy (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:57:54)
+    at Command.actionFn (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:134:32)
+    at C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:228:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
